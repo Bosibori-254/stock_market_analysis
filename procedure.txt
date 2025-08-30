@@ -1,0 +1,157 @@
+# Kenya Stock Market Data Collection Strategy
+
+## Primary Data Sources for Web Scraping
+
+### 1. **Nairobi Securities Exchange (NSE) Official Website**
+- **URL**: `https://www.nse.co.ke/`
+- **Data Available**: Live prices, market summaries, listed companies
+- **Scraping Method**: BeautifulSoup + Requests
+- **Update Frequency**: Real-time during trading hours
+- **Key Pages**:
+  - `/trading/equity-prices/` - Current stock prices
+  - `/listed-companies/` - Company profiles and fundamentals
+
+### 2. **Capital Markets Authority (CMA) Kenya**
+- **URL**: `https://www.cma.or.ke/`
+- **Data Available**: Market statistics, regulatory reports, market performance
+- **Scraping Method**: BeautifulSoup + Requests
+- **Key Sections**:
+  - Market statistics and indices
+  - Weekly/Monthly market reports
+  - Market capitalization data
+
+### 3. **Investing.com (Kenya Section)**
+- **URL**: `https://www.investing.com/equities/kenya`
+- **Data Available**: Historical prices, charts, financial ratios
+- **Scraping Method**: Selenium (dynamic content)
+- **Coverage**: Major NSE stocks with 5+ years of historical data
+
+### 4. **Yahoo Finance (Limited Kenya Coverage)**
+- **Symbols**: Some NSE stocks available as `.NR` suffix
+- **API Access**: `yfinance` Python library
+- **Data Quality**: Good for available stocks, limited coverage
+
+## Implementation Setup
+
+### Required Python Libraries
+```bash
+pip install requests beautifulsoup4 selenium pandas numpy yfinance lxml openpyxl
+```
+
+### Chrome Driver Setup
+1. Download ChromeDriver from: `https://chromedriver.chromium.org/`
+2. Place in system PATH or specify path in code
+3. Use headless mode for server deployment
+
+## Data Collection Schedule
+
+### Week 1: Historical Data Collection
+- **Days 1-2**: Set up scraping environment and test connections
+- **Days 3-4**: Collect 5-year historical data for all target stocks
+- **Days 5**: Data cleaning and validation
+- **Days 6-7**: Backup data collection from alternative sources
+
+### Week 2: Analysis and Monitoring
+- **Days 8-10**: Run analysis scripts on collected data
+- **Days 11-12**: Set up automated daily data updates
+- **Days 13-14**: Generate reports and trading signals
+
+## Target Stocks Data Mapping
+
+| NSE Symbol | Company Name | Investing.com URL | Yahoo Symbol |
+|------------|--------------|-------------------|--------------|
+| SCOM | Safaricom PLC | /equities/safaricom-historical-data | SCOM.NR |
+| EQTY | Equity Group Holdings | /equities/equity-bank-historical-data | EQTY.NR |
+| KCB | KCB Group | /equities/kenya-commercial-bank-historical-data | KCB.NR |
+| EABL | East African Breweries | /equities/east-african-breweries-historical-data | - |
+| COOP | Co-operative Bank | /equities/cooperative-bank-historical-data | - |
+| NCBA | NCBA Group | - | - |
+| BAT | British American Tobacco | - | - |
+| ABSA | Absa Bank Kenya | - | - |
+
+## Data Structure and Storage
+
+### Historical Data Fields
+- **Date**: Trading date
+- **Open**: Opening price
+- **High**: Daily high price  
+- **Low**: Daily low price
+- **Close**: Closing price
+- **Volume**: Trading volume
+- **Market Cap**: Market capitalization (when available)
+
+### Live Data Fields
+- **Symbol**: Stock symbol
+- **Current Price**: Real-time price
+- **Change**: Daily change (KES)
+- **Change %**: Daily percentage change
+- **Volume**: Current day volume
+- **Timestamp**: Data collection time
+
+### File Organization
+```
+kenya_stock_data/
+├── historical/
+│   ├── SCOM_historical.csv
+│   ├── EQTY_historical.csv
+│   └── ...
+├── live/
+│   ├── daily_prices_2024-08-29.csv
+│   └── ...
+├── market_data/
+│   ├── nse20_index.csv
+│   └── market_overview.json
+└── analysis/
+    ├── processed_data.csv
+    └── trading_signals.csv
+```
+
+## Legal and Ethical Considerations
+
+### Best Practices
+- **Rate Limiting**: 2-3 second delays between requests
+- **User-Agent**: Use realistic browser headers
+- **Robots.txt**: Check and respect site policies
+- **Terms of Service**: Review each site's ToS before scraping
+
+### Error Handling
+- Implement retry logic with exponential backoff
+- Log all errors and failed requests
+- Create fallback data sources
+- Validate data quality and completeness
+
+## Alternative Data Sources (If Scraping Fails)
+
+### Manual Data Collection
+- **NSE Daily Bulletins**: PDF reports with daily trading data
+- **Broker Research Reports**: CIC Capital, Genghis Capital, Sterling Capital
+- **Financial News Sites**: Business Daily, The Star Business
+
+### Paid Data APIs
+- **Bloomberg API**: Professional-grade data (expensive)
+- **Reuters Eikon**: Comprehensive financial data
+- **Local Data Providers**: Kenya-specific financial data vendors
+
+## Automation and Monitoring
+
+### Daily Data Collection Script
+- Run at market close (3:30 PM EAT)
+- Collect current day's trading data
+- Update historical databases
+- Generate daily summary reports
+
+### Data Quality Checks
+- Compare prices across multiple sources
+- Check for missing dates or outliers
+- Validate volume and turnover figures
+- Alert on significant data discrepancies
+
+## Next Steps for Implementation
+
+1. **Test the scraper code** on a small subset of stocks first
+2. **Verify data accuracy** by cross-checking with official NSE reports  
+3. **Set up automated data collection** once manual testing is successful
+4. **Create data backup and recovery procedures**
+5. **Implement real-time monitoring** for data collection failures
+
+Would you like me to help you set up any specific part of this data collection system or modify the scraper code for your particular requirements?
