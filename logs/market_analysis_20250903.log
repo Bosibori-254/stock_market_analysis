@@ -1,0 +1,66 @@
+2025-09-03 15:59:24,354 - __main__ - INFO - Starting Stock Market Analysis
+2025-09-03 15:59:24,355 - __main__ - INFO - Starting data fetch process
+2025-09-03 15:59:24,355 - __main__ - INFO - Fetching data for SPY
+2025-09-03 15:59:30,752 - __main__ - INFO - Successfully fetched 1254 records for SPY
+2025-09-03 15:59:30,752 - __main__ - INFO - Fetching data for QQQ
+2025-09-03 15:59:32,025 - __main__ - INFO - Successfully fetched 1254 records for QQQ
+2025-09-03 15:59:32,026 - __main__ - INFO - Fetching data for DIA
+2025-09-03 15:59:33,314 - __main__ - INFO - Successfully fetched 1254 records for DIA
+2025-09-03 15:59:33,315 - __main__ - INFO - Fetching data for IWM
+2025-09-03 15:59:34,566 - __main__ - INFO - Successfully fetched 1254 records for IWM
+2025-09-03 15:59:34,566 - __main__ - INFO - Fetching data for AAPL
+2025-09-03 15:59:35,741 - __main__ - INFO - Successfully fetched 1254 records for AAPL
+2025-09-03 15:59:35,741 - __main__ - INFO - Fetching data for MSFT
+2025-09-03 15:59:36,991 - __main__ - INFO - Successfully fetched 1254 records for MSFT
+2025-09-03 15:59:36,991 - __main__ - INFO - Successfully fetched data for 6 symbols
+2025-09-03 15:59:36,991 - __main__ - INFO - Data fetched for 6 symbols
+2025-09-03 15:59:36,992 - __main__ - INFO - Running technical analysis
+2025-09-03 15:59:37,005 - __main__ - INFO - Analysis completed for SPY
+2025-09-03 15:59:37,020 - __main__ - INFO - Analysis completed for QQQ
+2025-09-03 15:59:37,039 - __main__ - INFO - Analysis completed for DIA
+2025-09-03 15:59:37,055 - __main__ - INFO - Analysis completed for IWM
+2025-09-03 15:59:37,072 - __main__ - INFO - Analysis completed for AAPL
+2025-09-03 15:59:37,091 - __main__ - INFO - Analysis completed for MSFT
+2025-09-03 15:59:37,092 - __main__ - INFO - Generating trading signals report
+2025-09-03 15:59:37,124 - __main__ - INFO - Generating summary statistics
+2025-09-03 15:59:37,156 - __main__ - INFO - Generating charts
+2025-09-03 15:59:39,313 - __main__ - INFO - Chart saved: output\charts\SPY_analysis.png
+2025-09-03 15:59:40,121 - __main__ - INFO - Chart saved: output\charts\QQQ_analysis.png
+2025-09-03 15:59:40,883 - __main__ - INFO - Chart saved: output\charts\DIA_analysis.png
+2025-09-03 15:59:41,646 - __main__ - INFO - Chart saved: output\charts\IWM_analysis.png
+2025-09-03 15:59:42,541 - __main__ - INFO - Chart saved: output\charts\AAPL_analysis.png
+2025-09-03 15:59:43,340 - __main__ - INFO - Chart saved: output\charts\MSFT_analysis.png
+2025-09-03 15:59:43,343 - __main__ - INFO - Analysis completed successfully
+2025-09-03 15:59:44,976 - __main__ - INFO - Starting Stock Market Analysis
+2025-09-03 15:59:44,976 - __main__ - INFO - Starting data fetch process
+2025-09-03 15:59:44,977 - __main__ - INFO - Fetching data for SPY
+2025-09-03 15:59:47,392 - __main__ - INFO - Successfully fetched 1254 records for SPY
+2025-09-03 15:59:47,392 - __main__ - INFO - Fetching data for QQQ
+2025-09-03 15:59:48,687 - __main__ - INFO - Successfully fetched 1254 records for QQQ
+2025-09-03 15:59:48,688 - __main__ - INFO - Fetching data for DIA
+2025-09-03 15:59:49,917 - __main__ - INFO - Successfully fetched 1254 records for DIA
+2025-09-03 15:59:49,917 - __main__ - INFO - Fetching data for IWM
+2025-09-03 15:59:51,239 - __main__ - INFO - Successfully fetched 1254 records for IWM
+2025-09-03 15:59:51,240 - __main__ - INFO - Fetching data for AAPL
+2025-09-03 15:59:52,889 - __main__ - INFO - Successfully fetched 1254 records for AAPL
+2025-09-03 15:59:52,889 - __main__ - INFO - Fetching data for MSFT
+2025-09-03 15:59:54,168 - __main__ - INFO - Successfully fetched 1254 records for MSFT
+2025-09-03 15:59:54,168 - __main__ - INFO - Successfully fetched data for 6 symbols
+2025-09-03 15:59:54,169 - __main__ - INFO - Data fetched for 6 symbols
+2025-09-03 15:59:54,169 - __main__ - INFO - Running technical analysis
+2025-09-03 15:59:54,182 - __main__ - INFO - Analysis completed for SPY
+2025-09-03 15:59:54,270 - __main__ - INFO - Analysis completed for QQQ
+2025-09-03 15:59:54,296 - __main__ - INFO - Analysis completed for DIA
+2025-09-03 15:59:54,308 - __main__ - INFO - Analysis completed for IWM
+2025-09-03 15:59:54,320 - __main__ - INFO - Analysis completed for AAPL
+2025-09-03 15:59:54,329 - __main__ - INFO - Analysis completed for MSFT
+2025-09-03 15:59:54,330 - __main__ - INFO - Generating trading signals report
+2025-09-03 15:59:54,346 - __main__ - INFO - Generating summary statistics
+2025-09-03 15:59:54,356 - __main__ - INFO - Generating charts
+2025-09-03 15:59:55,176 - __main__ - INFO - Chart saved: output\charts\SPY_analysis.png
+2025-09-03 15:59:55,987 - __main__ - INFO - Chart saved: output\charts\QQQ_analysis.png
+2025-09-03 15:59:56,667 - __main__ - INFO - Chart saved: output\charts\DIA_analysis.png
+2025-09-03 15:59:57,432 - __main__ - INFO - Chart saved: output\charts\IWM_analysis.png
+2025-09-03 15:59:58,360 - __main__ - INFO - Chart saved: output\charts\AAPL_analysis.png
+2025-09-03 15:59:59,103 - __main__ - INFO - Chart saved: output\charts\MSFT_analysis.png
+2025-09-03 15:59:59,107 - __main__ - INFO - Analysis completed successfully
